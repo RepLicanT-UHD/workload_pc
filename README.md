@@ -2,9 +2,9 @@
 ```
 git clone https://github.com/Stormle/gr-miner-docker
 cd gr-miner-docker
-```
+
 * Replace Dockerfile's wallet address with your own
-```
+
 docker-compose up
 ```
 
