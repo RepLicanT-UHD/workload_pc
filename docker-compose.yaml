@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+  gr-miner:
+
+    build: .
+
+    container_name: gr_miner
