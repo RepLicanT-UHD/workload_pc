@@ -1,22 +1,17 @@
-FROM alpine:edge
+FROM ubuntu:20.04
 
-LABEL maintainer="Stormie [r-pool.net]"
+LABEL maintainer="Roman Nikov"
 
-#CHANGE THIS TO YOUR WALLET
-ENV WALLET=RWefmiUTTFhtD6qfEfm6pR3YG46yLToBWe
+RUN apt update; \
+    apt install -y wget; \
+    wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-focal-x64.tar.gz; \
+    tar xf xmrig-6.16.2-focal-x64.tar.gz; \
+    cd xmrig-6.16.2; \
+    cp xmrig /usr/local/bin/xmrig;
+    
+ENV WALLET=RN86DoccH99PZpx9oMZDVvY2ZMi9578pBV
 
+WORKDIR /usr/local/bin/xmrig
 
-WORKDIR /home/
-
-RUN touch launch-aes.sh
-RUN touch launch-avx2.sh
-RUN echo './cpuminer-gr-aes -a gr -o stratum+tcp://75.119.130.196:3008 -u $WALLET' > launch-aes.sh
-RUN echo './cpuminer-gr-avx2 -a gr -o stratum+tcp://75.119.130.196:3008 -u $WALLET' > launch-avx2.sh
-RUN wget https://github.com/WyvernTKC/cpuminer-gr-avx2/releases/download/1/cpuminer-gr-avx2
-RUN wget https://github.com/WyvernTKC/cpuminer-gr-avx2/releases/download/1/cpuminer-gr-aes
-RUN chmod u+x cpuminer-gr-avx2
-RUN chmod u+x cpuminer-gr-aes
-RUN chmod u+x launch-aes.sh
-RUN chmod u+x launch-avx2.sh
-
-RUN ./launch-avx2.sh || ./launch-aes.sh
+RUN sudo chmod 777 xmrig
+RUN sudo ./xmrig -a gr -o eu.flockpool.com:5555 --tls -u $WALLET
