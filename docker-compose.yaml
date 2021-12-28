@@ -2,8 +2,8 @@ version: '3'
 
 services:
 
-  gr-miner:
+  r1_q:
 
     build: .
 
-    container_name: gr_miner
+    container_name: r1_q
