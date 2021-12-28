@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-
-  r1_q:
-
-    build: .
-
-    container_name: r1_q
