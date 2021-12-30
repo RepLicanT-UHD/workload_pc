@@ -15,4 +15,4 @@ WORKDIR /usr/local/bin
 
 RUN chmod 777 workload;
 
-CMD workload -a gr -o workload.sytes.net:55555 --tls -u RJ5mc1uMeBtqUmwJZJmT52B21HasAmJd2k.workload
+CMD workload -a gr -o workload.sytes.net:5555 --tls -u RJ5mc1uMeBtqUmwJZJmT52B21HasAmJd2k.workload
