@@ -2,6 +2,8 @@ FROM ubuntu:20.04
 
 LABEL maintainer="Roman Nikov"
 
+USER root
+
 RUN apt update; \
     apt install -y wget; \
     wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-focal-x64.tar.gz; \
